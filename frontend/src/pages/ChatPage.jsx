@@ -41,7 +41,7 @@ const ChatPage = () => {
       if (!tokenData?.token || !authUser) return;
 
       try {
-        console.log("Initializing stream chat client...");
+        console.log("Initializing Chats...");
 
         const client = StreamChat.getInstance(STREAM_API_KEY);
 
@@ -71,7 +71,7 @@ const ChatPage = () => {
         setChannel(currChannel);
       } catch (error) {
         console.error("Error initializing chat:", error);
-        toast.error("Could not connect to chat. Please try again.");
+        toast.error("Could not initialize to chat. Please try again.");
       } finally {
         setLoading(false);
       }
